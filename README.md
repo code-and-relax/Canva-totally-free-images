@@ -1,200 +1,62 @@
-# 🎨 Canva Image Extractor
+# Canva Image Extractor
 
-Una extensión de Chrome elegante y fácil de usar para extraer y arrastrar imágenes desde diseños de Canva.
+Una extensión de Chrome diseñada para extraer imágenes de diseños en Canva de manera eficiente y sin complicaciones.
 
-**🔒 NO accedem a datos personales, contraseñas, o información sensible.**
+## Características Principales
 
-## 📷 **Escaneo Automático**
+- **Escaneo Automático**: Detecta automáticamente si estás en una página de diseño de Canva y extrae imágenes relevantes.
+- **Gestión de Imágenes**: Opciones para refrescar, limpiar y copiar imágenes al portapapeles.
+- **Interfaz Intuitiva**: Diseño minimalista y funcional para una experiencia de usuario fluida.
+- **Drag & Drop**: Arrastra imágenes directamente desde el popup al canvas de Canva.
 
-- Detecta automáticamente si estás en Canva
-- Extrae imágenes específicamente de páginas de diseño (contenedores con data-page-id)
-- Evita duplicados automáticamente
+## Cómo Usar
 
-## 🛠️ **Gestión de Imágenes**
+1. Abre una página de diseño en Canva.
+2. Haz clic en el ícono de la extensión en la barra de herramientas de Chrome.
+3. Las imágenes se escanearán automáticamente.
+4. Arrastra las imágenes al canvas de Canva según sea necesario.
 
-- **Refresh**: Vuelve a escanear la página
-- **Clear**: Limpia todas las imágenes almacenadas
-- **Copy**: Copia imagen al portapapeles
+## Instalación
 
-## ✨ Características
+1. Descarga o clona este repositorio.
+2. Abre Chrome y navega a `chrome://extensions/`.
+3. Activa "Modo de desarrollador".
+4. Haz clic en "Cargar extensión sin empaquetar" y selecciona la carpeta del proyecto.
 
-### 🚀 **Auto-Scan Inteligente**
+## Seguridad
 
-- La extensión **escanea automáticamente** al abrirse si estás en una página de Canva
-- No necesitas presionar botones, ¡es completamente automático!
+- **Permisos Mínimos**: La extensión solo solicita acceso a la pestaña activa, inyección de scripts, almacenamiento temporal y escritura en el portapapeles.
+- **Privacidad Garantizada**: No recopilamos datos personales ni accedemos a información sensible.
+- **Código Abierto**: Todo el código está disponible para auditoría.
 
-### 🎯 **Interfaz Unificada**
+## Tecnologías Utilizadas
 
-- **Una sola ventana** que maneja todo
-- Popup principal con todas las imágenes encontradas
-- Diseño limpio y minimalista
+- **Manifest V3**: API de extensiones de Chrome.
+- **JavaScript**: Sin dependencias externas.
+- **CSS Moderno**: Uso de Grid, Flexbox y animaciones.
+- **Chrome APIs**: Scripting, Storage y Tabs.
 
-### 🖱️ **Drag & Drop Directo**
+## Compatibilidad
 
-- Arrastra imágenes **directamente desde el popup** al canvas de Canva
-- Las imágenes se nombran automáticamente como `tl.png`
-- Extracción precisa desde páginas de Canva
+- **Navegadores**: Chrome y Edge (basado en Chromium).
+- **Plataforma**: Diseños en Canva.com.
 
-### 🎨 **UX/UI Mejorado**
-
-- Diseño moderno y atractivo
-- Indicadores visuales claros
-- Animaciones suaves y feedback inmediato
-- Estados de carga y error bien definidos
-
-## 🛠️ Cómo Usar
-
-### Método Principal
-
-1. **Abre una página de diseño en Canva**
-2. **Haz clic en el ícono de la extensión** en la barra de herramientas
-3. **¡Listo!** Las imágenes se escanean automáticamente
-4. **Arrastra cualquier imagen** directamente al canvas de Canva
-
-## 🎯 Funcionalidades
-
-### � **Gestión de Imágenes**
-
-- **Refresh**: Vuelve a escanear la página
-- **Clear**: Limpia todas las imágenes almacenadas
-- **Panel Floating**: Toggle del panel flotante
-
-### 💡 **Estados Inteligentes**
-
-- **Página de Canva detectada**: Escaneo automático
-- **No es Canva**: Mensaje informativo claro
-- **Sin imágenes**: Instrucciones útiles
-- **Error**: Mensajes de error descriptivos
-
-## 🎨 Arquitectura
-
-### 🏗️ **Diseño Limpio**
-
-```text
-┌─────────────────┐
-│   Popup.html    │ ← Interfaz principal
-│ (Auto-escaneo)  │
-└─────────────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Background.js  │ ← Lógica central
-│ (Coordinación)  │
-└─────────────────┘
-```
-
-### 🔧 **Componentes**
-
-- **popup.js**: Interfaz principal con auto-scan
-- **background.js**: Lógica de extracción y coordinación
-- **content.js**: Script simplificado para inyección
-- **popup.html**: UI moderna y responsive
-
-## 🚀 Instalación
-
-### 📦 **Instalación Rápida**
-
-1. Descarga o clona este repositorio
-2. Abre Chrome y ve a `chrome://extensions/`
-3. Activa "Modo de desarrollador"
-4. Haz clic en "Cargar extensión sin empaquetar"
-5. Selecciona la carpeta del proyecto
-6. ¡La extensión está lista para usar!
-
-### 🔧 **Para Desarrolladores**
-
-```bash
-# Clonar repositorio
-git clone [URL_REPOSITORIO]
-cd "Canva Caido"
-
-# Ver historial de desarrollo
-git log --oneline
-```
-
-## 🔐 **Información de Seguridad**
-
-### 🔓 **¿Cómo verificar que es seguro?**
-
-1. **Verificar permisos**: Solo solicita acceso mínimo necesario
-2. **Auditar funcionalidad**: Todo el código está disponible para revisión
-
-### 📋 **Permisos Mínimos**
-
-- `activeTab`: Acceso solo a pestaña activa de Canva
-- `scripting`: Inyección de script de extracción
-- `storage`: Almacenamiento temporal de imágenes
-- `clipboardWrite`: Copiar URLs al portapapeles
-
-### ❌ **NO hacemos:**
-
-- Recopilar datos personales
-- Enviar información a servidores externos  
-- Acceder a otras pestañas o sitios web
-- Modificar contenido permanentemente
-
-## 🎯 Casos de Uso
-
-### ✅ **Funciona Perfecto Para:**
-
-- Extraer imágenes de diseños de Canva
-- Reutilizar elementos visuales en nuevos diseños
-- Organizar recursos gráficos
-- Workflow rápido de diseño
-
-### 📝 **Flujo de Trabajo Típico:**
-
-1. Abrir diseño en Canva
-2. Clic en extensión (auto-escaneo)
-3. Arrastrar imágenes al nuevo diseño
-4. ¡Listo!
-
-## 🔧 Tecnologías
-
-- **Manifest V3** (Chrome Extensions API)
-- **Vanilla JavaScript** (Sin dependencias externas)
-- **Modern CSS** (Grid, Flexbox, Animations)
-- **Chrome APIs** (Scripting, Storage, Tabs)
-- **JavaScript Obfuscator** (Protección de código)
-
-## 🔍 **Verificación y Desarrollo**
-
-### 📁 **Estructura del Proyecto**
+## Estructura del Proyecto
 
 ```text
 Canva Caido/
-├── 🔒 background.js      (Ofuscado - Producción)
-├── 🔒 popup.js          (Ofuscado - Producción)  
-├── 🔒 injected.js       (Ofuscado - Producción)
-├── 📄 popup.html        (Interfaz de usuario)
-├── 📄 manifest.json     (Configuración)
-└── 📁 icons/           (Iconos de la extensión)
+├── background.js      (Lógica central)
+├── popup.js           (Interfaz principal)
+├── injected.js        (Script de inyección)
+├── popup.html         (Interfaz de usuario)
+├── manifest.json      (Configuración de la extensión)
+└── icons/             (Recursos gráficos)
 ```
 
-## �📱 Compatibilidad
+## Contribuciones
 
-- ✅ Chrome (Manifest V3)
-- ✅ Edge (Chromium)
-- ✅ Canva.com (Todas las páginas de diseño)
-
-## 🤝 **Confianza y Transparencia**
-
-### ✅ **Extensión Verificada**
-
-- **Código abierto**: Todo el código fuente está disponible
-- **Sin telemetría**: No enviamos datos a ningún servidor
-- **Permisos mínimos**: Solo acceso necesario para funcionar
-- **Sin dependencias**: No usa librerías externas dudosas
-
-### 🔒 **Compromiso de Privacidad**
-
-- No recopilamos información personal
-- No accedemos a datos de login o contraseñas
-- Solo procesamos imágenes públicas de Canva
-- Almacenamiento local temporal únicamente
+¿Tienes ideas o encontraste un problema? Abre un issue o envía un pull request en el repositorio.
 
 ---
 
-**¿Problemas o sugerencias?** Abre un issue en el repositorio.
-
-## Hecho con ❤️ para la comunidad de diseñadores
+**Nota**: Esta extensión es una herramienta local y no interactúa con servidores externos. Diseñada para facilitar el flujo de trabajo de diseñadores gráficos.
