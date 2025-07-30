@@ -1,4 +1,4 @@
-# Canva Image Extractor
+# 🎨 Canva Image Extractor
 
 Una extensión de Chrome diseñada para extraer imágenes de diseños en Canva de manera eficiente y sin complicaciones.
 
