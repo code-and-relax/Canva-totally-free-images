@@ -1,4 +1,4 @@
-# 🎨 Canva Image Extractor
+# 🎨 Canva Image Extractor (.MD made by IA)
 
 Una extensión de Chrome elegante y fácil de usar para extraer y arrastrar imágenes desde diseños de Canva.
 
