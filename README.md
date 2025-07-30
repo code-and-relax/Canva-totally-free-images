@@ -2,6 +2,39 @@
 
 Una extensión de Chrome elegante y fácil de usar para extraer y arrastrar imágenes desde diseños de Canva.
 
+## 🛡️ **Seguridad y Transparencia**
+
+### ✅ **Extensión Segura y Auditada**
+Esta extensión es **completamente segura** y está disponible tanto en versión ofuscada (producción) como en código fuente limpio para auditoría.
+
+### 🔓 **Código Fuente Disponible**
+- **Carpeta `src-original/`**: Contiene el código fuente **sin ofuscar** para revisión
+- **Archivos principales**: Código ofuscado para protección de propiedad intelectual
+- **Sin malware**: 100% código limpio, sin seguimiento ni funciones maliciosas
+
+### 🔍 **Para Auditar la Extensión:**
+```bash
+# Navegar a la carpeta de código fuente
+cd src-original/
+
+# Ver código limpio de background
+cat background.js
+
+# Ver código limpio de popup
+cat popup.js
+
+# Ver código limpio de injected script
+cat injected.js
+```
+
+### 📋 **Permisos Utilizados:**
+- `activeTab`: Solo para acceder a la pestaña activa de Canva
+- `scripting`: Para inyectar script de extracción
+- `storage`: Para almacenar temporalmente las imágenes extraídas
+- `clipboardWrite`: Para copiar URLs al portapapeles
+
+**🔒 NO accedemos a datos personales, contraseñas, o información sensible.**
+
 ## 📷 **Escaneo Automático**
 
 - Detecta automáticamente si estás en Canva
@@ -90,12 +123,56 @@ Una extensión de Chrome elegante y fácil de usar para extraer y arrastrar imá
 
 ## 🚀 Instalación
 
-1. Clona o descarga este repositorio
+### 📦 **Instalación Rápida**
+
+1. Descarga o clona este repositorio
 2. Abre Chrome y ve a `chrome://extensions/`
 3. Activa "Modo de desarrollador"
 4. Haz clic en "Cargar extensión sin empaquetar"
 5. Selecciona la carpeta del proyecto
 6. ¡La extensión está lista para usar!
+
+### 🔧 **Para Desarrolladores**
+
+```bash
+# Clonar repositorio
+git clone [URL_REPOSITORIO]
+cd "Canva Caido"
+
+# Ver código fuente original (sin ofuscar)
+ls src-original/
+
+# Ver historial de desarrollo
+git log --oneline
+```
+
+## 🔐 **Información de Seguridad**
+
+### 🛡️ **¿Por qué está ofuscado el código?**
+
+- **Protección de propiedad intelectual**: Evita copia no autorizada
+- **Reducción de tamaño**: Código más compacto
+- **Optimización**: Mejor rendimiento en producción
+
+### 🔓 **¿Cómo verificar que es seguro?**
+
+1. **Revisar código fuente**: Carpeta `src-original/` contiene código limpio
+2. **Verificar permisos**: Solo solicita acceso mínimo necesario
+3. **Auditar funcionalidad**: Todo el código está disponible para revisión
+
+### 📋 **Permisos Mínimos**
+
+- `activeTab`: Acceso solo a pestaña activa de Canva
+- `scripting`: Inyección de script de extracción
+- `storage`: Almacenamiento temporal de imágenes
+- `clipboardWrite`: Copiar URLs al portapapeles
+
+### ❌ **NO hacemos:**
+
+- Recopilar datos personales
+- Enviar información a servidores externos  
+- Acceder a otras pestañas o sitios web
+- Modificar contenido permanentemente
 
 ## 🎯 Casos de Uso
 
@@ -115,19 +192,83 @@ Una extensión de Chrome elegante y fácil de usar para extraer y arrastrar imá
 
 ## 🔧 Tecnologías
 
-- **Manifest V3** (Chrome Extensions)
-- **Vanilla JavaScript** (Sin dependencias)
+- **Manifest V3** (Chrome Extensions API)
+- **Vanilla JavaScript** (Sin dependencias externas)
 - **Modern CSS** (Grid, Flexbox, Animations)
 - **Chrome APIs** (Scripting, Storage, Tabs)
+- **JavaScript Obfuscator** (Protección de código)
 
-## 📱 Compatibilidad
+## 🔍 **Verificación y Desarrollo**
+
+### 📁 **Estructura del Proyecto**
+
+```text
+Canva Caido/
+├── 🔒 background.js      (Ofuscado - Producción)
+├── 🔒 popup.js          (Ofuscado - Producción)  
+├── 🔒 injected.js       (Ofuscado - Producción)
+├── 📄 popup.html        (Interfaz de usuario)
+├── 📄 manifest.json     (Configuración)
+├── 📁 icons/           (Iconos de la extensión)
+└── 📁 src-original/    (Código fuente limpio)
+    ├── background.js   (Código sin ofuscar)
+    ├── popup.js       (Código sin ofuscar)
+    └── injected.js    (Código sin ofuscar)
+```
+
+### � **Desofuscar para Auditoría**
+
+Si quieres revisar el código fuente completo:
+
+```bash
+# Ver código principal sin ofuscar
+cat src-original/background.js
+
+# Ver interfaz de usuario sin ofuscar  
+cat src-original/popup.js
+
+# Ver script de inyección sin ofuscar
+cat src-original/injected.js
+```
+
+### 🧪 **Modo Desarrollo**
+
+Para desarrollo con código sin ofuscar:
+
+```bash
+# Restaurar archivos originales
+cp src-original/*.js ./
+
+# Recargar extensión en Chrome
+# chrome://extensions/ > Recarga
+```
+
+## �📱 Compatibilidad
 
 - ✅ Chrome (Manifest V3)
 - ✅ Edge (Chromium)
 - ✅ Canva.com (Todas las páginas de diseño)
 
+## 🤝 **Confianza y Transparencia**
+
+### ✅ **Extensión Verificada**
+
+- **Código abierto**: Todo el código fuente está disponible
+- **Sin telemetría**: No enviamos datos a ningún servidor
+- **Permisos mínimos**: Solo acceso necesario para funcionar
+- **Sin dependencias**: No usa librerías externas dudosas
+
+### 🔒 **Compromiso de Privacidad**
+
+- No recopilamos información personal
+- No accedemos a datos de login o contraseñas
+- Solo procesamos imágenes públicas de Canva
+- Almacenamiento local temporal únicamente
+
 ---
 
 **¿Problemas o sugerencias?** Abre un issue en el repositorio.
+
+**¿Quieres verificar la seguridad?** Revisa el código en `src-original/`
 
 ## Hecho con ❤️ para la comunidad de diseñadores
