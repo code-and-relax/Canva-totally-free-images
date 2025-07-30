@@ -1,0 +1,11 @@
+<!-- Icon SVG for the extension -->
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <rect width="128" height="128" rx="24" fill="#6750A4"/>
+    <path d="M32 40C32 35.5817 35.5817 32 40 32H88C92.4183 32 96 35.5817 96 40V88C96 92.4183 92.4183 96 88 96H40C35.5817 96 32 92.4183 32 88V40Z" fill="white"/>
+    <rect x="40" y="40" width="16" height="16" rx="2" fill="#6750A4"/>
+    <rect x="64" y="40" width="24" height="16" rx="2" fill="#6750A4"/>
+    <rect x="40" y="64" width="24" height="16" rx="2" fill="#6750A4"/>
+    <rect x="72" y="64" width="16" height="16" rx="2" fill="#6750A4"/>
+    <path d="M45 75L50 80L63 67" stroke="#6750A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
