@@ -265,10 +265,16 @@ cp src-original/*.js ./
 - Solo procesamos imágenes públicas de Canva
 - Almacenamiento local temporal únicamente
 
+### 📚 **Documentación de Seguridad**
+
+- 📄 **[SECURITY.md](./SECURITY.md)**: Guía completa de desofuscación y verificación
+- ⚡ **[QUICK_VERIFY.md](./QUICK_VERIFY.md)**: Verificación rápida en 30 segundos
+- 📁 **src-original/**: Código fuente sin ofuscar para auditoría
+
 ---
 
 **¿Problemas o sugerencias?** Abre un issue en el repositorio.
 
-**¿Quieres verificar la seguridad?** Revisa el código en `src-original/`
+**¿Quieres verificar la seguridad?** Lee [SECURITY.md](./SECURITY.md)
 
 ## Hecho con ❤️ para la comunidad de diseñadores

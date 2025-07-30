@@ -78,13 +78,13 @@ const obfuscationOptions = {
 function obfuscateFile(inputPath, outputPath) {
     try {
         console.log(`🔄 Ofuscando: ${inputPath}`);
-        
+
         const sourceCode = fs.readFileSync(inputPath, 'utf8');
         const obfuscationResult = JavaScriptObfuscator.obfuscate(sourceCode, obfuscationOptions);
-        
+
         fs.writeFileSync(outputPath, obfuscationResult.getObfuscatedCode());
         console.log(`✅ Completado: ${outputPath}`);
-        
+
         return true;
     } catch (error) {
         console.error(`❌ Error ofuscando ${inputPath}:`, error.message);
@@ -108,7 +108,7 @@ let totalFiles = filesToObfuscate.length;
 filesToObfuscate.forEach(filename => {
     const inputPath = path.join(__dirname, filename);
     const outputPath = path.join(__dirname, filename);
-    
+
     if (fs.existsSync(inputPath)) {
         if (obfuscateFile(inputPath, outputPath)) {
             successCount++;
