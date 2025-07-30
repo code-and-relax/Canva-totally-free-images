@@ -2,38 +2,7 @@
 
 Una extensión de Chrome elegante y fácil de usar para extraer y arrastrar imágenes desde diseños de Canva.
 
-## 🛡️ **Seguridad y Transparencia**
-
-### ✅ **Extensión Segura y Auditada**
-Esta extensión es **completamente segura** y está disponible tanto en versión ofuscada (producción) como en código fuente limpio para auditoría.
-
-### 🔓 **Código Fuente Disponible**
-- **Carpeta `src-original/`**: Contiene el código fuente **sin ofuscar** para revisión
-- **Archivos principales**: Código ofuscado para protección de propiedad intelectual
-- **Sin malware**: 100% código limpio, sin seguimiento ni funciones maliciosas
-
-### 🔍 **Para Auditar la Extensión:**
-```bash
-# Navegar a la carpeta de código fuente
-cd src-original/
-
-# Ver código limpio de background
-cat background.js
-
-# Ver código limpio de popup
-cat popup.js
-
-# Ver código limpio de injected script
-cat injected.js
-```
-
-### 📋 **Permisos Utilizados:**
-- `activeTab`: Solo para acceder a la pestaña activa de Canva
-- `scripting`: Para inyectar script de extracción
-- `storage`: Para almacenar temporalmente las imágenes extraídas
-- `clipboardWrite`: Para copiar URLs al portapapeles
-
-**🔒 NO accedemos a datos personales, contraseñas, o información sensible.**
+**🔒 NO accedem a datos personales, contraseñas, o información sensible.**
 
 ## 📷 **Escaneo Automático**
 
@@ -139,26 +108,16 @@ cat injected.js
 git clone [URL_REPOSITORIO]
 cd "Canva Caido"
 
-# Ver código fuente original (sin ofuscar)
-ls src-original/
-
 # Ver historial de desarrollo
 git log --oneline
 ```
 
 ## 🔐 **Información de Seguridad**
 
-### 🛡️ **¿Por qué está ofuscado el código?**
-
-- **Protección de propiedad intelectual**: Evita copia no autorizada
-- **Reducción de tamaño**: Código más compacto
-- **Optimización**: Mejor rendimiento en producción
-
 ### 🔓 **¿Cómo verificar que es seguro?**
 
-1. **Revisar código fuente**: Carpeta `src-original/` contiene código limpio
-2. **Verificar permisos**: Solo solicita acceso mínimo necesario
-3. **Auditar funcionalidad**: Todo el código está disponible para revisión
+1. **Verificar permisos**: Solo solicita acceso mínimo necesario
+2. **Auditar funcionalidad**: Todo el código está disponible para revisión
 
 ### 📋 **Permisos Mínimos**
 
@@ -209,38 +168,7 @@ Canva Caido/
 ├── 🔒 injected.js       (Ofuscado - Producción)
 ├── 📄 popup.html        (Interfaz de usuario)
 ├── 📄 manifest.json     (Configuración)
-├── 📁 icons/           (Iconos de la extensión)
-└── 📁 src-original/    (Código fuente limpio)
-    ├── background.js   (Código sin ofuscar)
-    ├── popup.js       (Código sin ofuscar)
-    └── injected.js    (Código sin ofuscar)
-```
-
-### � **Desofuscar para Auditoría**
-
-Si quieres revisar el código fuente completo:
-
-```bash
-# Ver código principal sin ofuscar
-cat src-original/background.js
-
-# Ver interfaz de usuario sin ofuscar  
-cat src-original/popup.js
-
-# Ver script de inyección sin ofuscar
-cat src-original/injected.js
-```
-
-### 🧪 **Modo Desarrollo**
-
-Para desarrollo con código sin ofuscar:
-
-```bash
-# Restaurar archivos originales
-cp src-original/*.js ./
-
-# Recargar extensión en Chrome
-# chrome://extensions/ > Recarga
+└── 📁 icons/           (Iconos de la extensión)
 ```
 
 ## �📱 Compatibilidad
@@ -265,16 +193,8 @@ cp src-original/*.js ./
 - Solo procesamos imágenes públicas de Canva
 - Almacenamiento local temporal únicamente
 
-### 📚 **Documentación de Seguridad**
-
-- 📄 **[SECURITY.md](./SECURITY.md)**: Guía completa de desofuscación y verificación
-- ⚡ **[QUICK_VERIFY.md](./QUICK_VERIFY.md)**: Verificación rápida en 30 segundos
-- 📁 **src-original/**: Código fuente sin ofuscar para auditoría
-
 ---
 
 **¿Problemas o sugerencias?** Abre un issue en el repositorio.
-
-**¿Quieres verificar la seguridad?** Lee [SECURITY.md](./SECURITY.md)
 
 ## Hecho con ❤️ para la comunidad de diseñadores
